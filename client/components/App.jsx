@@ -3,17 +3,23 @@ import './App.css'
 
 import {Route, Switch} from 'react-router-dom'
 
+import Home from './Home'
+import Header from './Header'
+
 const App = () => {
   return (
-     <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Have the FREE WILL to make a will today</h1>
-          <p>- Your peace of mind wills it so!</p>
-        </header>
+    <div className="App">
+        <div className='App-box'>
+        <Navbar />
+        <Switch>
+          <Route exact path='/' component={Home} />
+        </Switch>
+        </div>
+
+        
         <Step1 />
 
-      </div>
+    </div>
   )
 }
 
